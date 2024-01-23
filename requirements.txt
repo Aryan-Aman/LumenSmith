@@ -1,0 +1,30 @@
+Resources and documentation
+https://flask.palletsprojects.com/en/2.3.x/quickstart/ - flask documentation
+
+https://flask.palletsprojects.com/en/2.2.x/patterns/fileuploads/  - To upload file for /edit
+
+https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean  - stackoverflow 
+
+https://docs.opencv.org/3.4/d5/d98/tutorial_mat_operations.html  - stackoverflow
+
+https://www.tutorialspoint.com/converting-an-image-from-colour-to-grayscale-using-opencv - grayscale converting
+
+https://stackoverflow.com/questions/26080872/secret-key-not-set-in-flask-session-using-the-flask-session-extension- secret key error
+
+https://stackoverflow.com/questions/8863917/importerror-no-module-named-pil  - Pillow error
+
+
+HTML file :
+{% with messages = get_flashed_messages(with_categories=true) %}:
+Fetches flash messages from a message queue or storage mechanism.
+with_categories =true -> ensures messages are retrieved with their associated categories.
+{% if messages %}: Conditional block to render content only if messages exist
+{% for category, message in messages %}: Iterates through each message and its category.
+ 
+
+The safe filter is crucial for security. By default, templates in many frameworks like Flask and Django escape 
+any HTML characters present in variables to prevent cross-site scripting (XSS) attacks. These attacks inject
+malicious code into the page through user input.
+However, if your message variable contains actual HTML tags you want to render as HTML 
+(e.g., formatting or links), the safe filter tells the framework to trust the content and display it directly
+without escaping.

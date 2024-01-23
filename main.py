@@ -73,7 +73,7 @@ def edit():
         if 'file' not in request.files:
             flash('No file part')
             return "Error"
-        file = request.files['file']
+        file = request.files['file'] #
         # If the user does not select a file, the browser submits an
         # empty file without a filename.
         if file.filename == '':
